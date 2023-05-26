@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <sys/wait.h>
+#include "shell.h"
 
 #define MAX_COMMAND_LENGTH 100
 #define PROMPT "simple_shell$ "
@@ -12,7 +13,6 @@
  *
  * Return: Always 0.
  */
-int main(void)
 {
     char command[MAX_COMMAND_LENGTH];
     ssize_t bytesRead;
@@ -86,4 +86,3 @@ int main(void)
 
     return (0);
 }
-

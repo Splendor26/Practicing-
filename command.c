@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <sys/wait.h>
+#include "shell.h"
 
 #define MAX_COMMAND_LENGTH 100
 #define PROMPT "simple_shell$ "
@@ -12,8 +13,6 @@ void execute_command(char *command);
 void tokenize_command(char *command, char **args);
 void handle_child_process(char **args);
 void handle_parent_process(pid_t pid);
-
-int main(void)
 {
 	char command[MAX_COMMAND_LENGTH];
 
